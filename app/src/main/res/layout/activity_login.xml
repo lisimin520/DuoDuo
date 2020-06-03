@@ -31,13 +31,13 @@
 
     <ImageView
         android:id="@+id/denglu1"
-        android:layout_width="229dp"
-        android:layout_height="114dp"
-        android:layout_marginTop="128dp"
+        android:layout_width="177dp"
+        android:layout_height="123dp"
+        android:layout_marginTop="76dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/denglu" />
+        app:srcCompat="@drawable/duoduo" />
 
     <Button
         android:id="@+id/button2"

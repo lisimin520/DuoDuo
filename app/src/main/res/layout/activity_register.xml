@@ -8,14 +8,15 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="131dp"
-        android:layout_height="45dp"
+        android:layout_width="186dp"
+        android:layout_height="132dp"
         android:layout_marginTop="32dp"
         app:layout_constraintBottom_toTopOf="@+id/yonghuzhuce"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/zhuce" />
+        app:srcCompat="@drawable/duoduo" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/yonghuzhuce"
