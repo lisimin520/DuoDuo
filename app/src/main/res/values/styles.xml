@@ -8,4 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <item name="password" type="id" />
+    <item name="username" type="id" />
+    <item name="login" type="id" />
+    <item name="loading" type="id" />
 </resources>
