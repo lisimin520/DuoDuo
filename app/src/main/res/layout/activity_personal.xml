@@ -18,7 +18,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
             android:layout_width="412dp"
-            android:layout_height="140dp">
+            android:layout_height="180dp">
 
             <ImageView
                 android:id="@+id/yhid"
@@ -31,26 +31,39 @@
                 app:srcCompat="@android:drawable/ic_menu_myplaces" />
 
             <TextView
-                android:id="@+id/yhname"
+                android:id="@+id/truename"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginEnd="264dp"
+                android:text="张三"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/yhid"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/yhid"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
                 android:text="昵称"
                 android:textSize="18sp"
                 app:layout_constraintStart_toEndOf="@+id/yhid"
-                app:layout_constraintTop_toTopOf="@+id/yhid" />
+                app:layout_constraintTop_toBottomOf="@+id/truename" />
 
             <TextView
-                android:id="@+id/yhEmail"
+                android:id="@+id/email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginBottom="8dp"
-                android:text="123456789@qqcom"
+                android:layout_marginTop="16dp"
+                android:text="XXXXXXX@qqcom"
                 android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="@+id/yhid"
-                app:layout_constraintStart_toEndOf="@+id/yhid" />
+                app:layout_constraintStart_toEndOf="@+id/yhid"
+                app:layout_constraintTop_toBottomOf="@+id/nickname" />
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -61,6 +74,19 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/yhid"
                 app:srcCompat="@drawable/ic_adb_black_24dp" />
+
+            <TextView
+                android:id="@+id/birthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="210dp"
+                android:text="2020.06.01"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/yhid"
+                app:layout_constraintTop_toBottomOf="@+id/yhid" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>
@@ -89,7 +115,7 @@
                 app:srcCompat="@drawable/ic_account_circle_black_24dp" />
 
             <EditText
-                android:id="@+id/truename"
+                android:id="@+id/truename2"
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -110,7 +136,7 @@
                 app:srcCompat="@drawable/ic_airplanemode_active_black_24dp" />
 
             <EditText
-                android:id="@+id/yhname2"
+                android:id="@+id/nickname2"
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -131,7 +157,7 @@
                 app:srcCompat="@drawable/ic_email_black_24dp" />
 
             <EditText
-                android:id="@+id/yhEmail2"
+                android:id="@+id/email2"
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -164,7 +190,7 @@
                 app:endIconMode="custom"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView8"
-                app:layout_constraintTop_toBottomOf="@+id/yhEmail2">
+                app:layout_constraintTop_toBottomOf="@+id/email2">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
