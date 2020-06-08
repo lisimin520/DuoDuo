@@ -40,7 +40,7 @@
         app:srcCompat="@drawable/duoduo" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/register_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="112dp"
@@ -57,7 +57,7 @@
         android:layout_marginTop="112dp"
         android:text="忘记密码"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintStart_toEndOf="@+id/register_button"
         app:layout_constraintTop_toBottomOf="@+id/divider" />
 
     <androidx.constraintlayout.widget.ConstraintLayout

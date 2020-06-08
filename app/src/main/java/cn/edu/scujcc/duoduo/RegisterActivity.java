@@ -10,15 +10,12 @@ import android.os.Message;
 import android.text.Editable;
 import android.util.Log;
 import android.widget.Button;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.google.android.material.datepicker.MaterialDatePicker;
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.Date;
-
-import cn.edu.scujcc.duoduo.LoginActivity;
 
 public class RegisterActivity extends AppCompatActivity {
     private final static String TAG = "DuoDuo";
