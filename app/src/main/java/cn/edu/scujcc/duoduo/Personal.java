@@ -14,7 +14,7 @@ import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.Date;
 
-public class Personal extends AppCompatActivity {
+public class Personal extends AppCompatActivity{
 
     private final static String TAG = "DuoDuo";
     private TextInputLayout birthdayInput;
@@ -23,9 +23,13 @@ public class Personal extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d(TAG,"加载个人信息ing");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personal);
+        working();
+    }
 
+    public void working() {
         //同步按钮
         updateButton = findViewById(R.id.update_button);
         updateButton.setOnClickListener( v -> {
@@ -35,30 +39,29 @@ public class Personal extends AppCompatActivity {
 
         //生日获取
         birthdayInput =findViewById(R.id.yhbirthday);
-            MaterialDatePicker.Builder builder = MaterialDatePicker.Builder.datePicker();
-            //告诉builder想要的
-            builder.setTitleText(R.string.birthday_title);
-            MaterialDatePicker<Long> picker = builder.build();
-            picker.addOnPositiveButtonClickListener(s -> {
-                Log.d(TAG, "生日是：" + picker.getHeaderText());
-                birthday.setTime(s);
-                birthdayInput.getEditText().setText(picker.getHeaderText());
+        MaterialDatePicker.Builder builder = MaterialDatePicker.Builder.datePicker();
+        //告诉builder想要的
+        builder.setTitleText(R.string.birthday_title);
+        MaterialDatePicker<Long> picker = builder.build();
+        picker.addOnPositiveButtonClickListener(s -> {
+            Log.d(TAG, "生日是：" + picker.getHeaderText());
+            birthday.setTime(s);
+            birthdayInput.getEditText().setText(picker.getHeaderText());
 
-                //获取生日
-                TextInputLayout birthday2 = findViewById(R.id.yhbirthday);
-                TextView birthday = findViewById(R.id.birthday);
-                birthday.setText(picker.getHeaderText());
-            });
-            birthdayInput.setEndIconOnClickListener(v -> {
-                //弹出日历框
-                Log.d(TAG, "单击生日图标");
-                picker.show(getSupportFragmentManager(), picker.toString());
-            });
-
+            //获取生日
+            TextInputLayout birthday2 = findViewById(R.id.yhbirthday);
+            TextView birthday = findViewById(R.id.birthday);
+            birthday.setText(picker.getHeaderText());
+        });
+        birthdayInput.setEndIconOnClickListener(v -> {
+            //弹出日历框
+            Log.d(TAG, "单击生日图标");
+            picker.show(getSupportFragmentManager(), picker.toString());
+        });
     }
 
-    private void updateInformation() {
-        User user = new User();
+    public void updateInformation() {
+//        User user = new User();
         //获取输入内容
         //获取真实姓名
         EditText truename2 = findViewById(R.id.truename2);
