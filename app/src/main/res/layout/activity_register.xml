@@ -107,11 +107,16 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/shengri" />
+            app:srcCompat="@drawable/shengri"
+            android:enabled="false"
+            android:imeOptions="actionDone"
+            android:inputType="date"
+            android:singleLine="true"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/r_birthday"
             android:layout_width="304dp"
+            app:endIconDrawable="@drawable/ic_android_black_24dp"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

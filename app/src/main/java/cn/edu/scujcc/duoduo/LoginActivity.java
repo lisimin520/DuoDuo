@@ -67,10 +67,14 @@ public class LoginActivity extends AppCompatActivity {
             user = username.getEditText().getText().toString();
             String p = password.getEditText().getText().toString();
             lab.login(user, p, handler);
+            //跳转到主界面
+            Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+            startActivity(intent);
         });
 
         registerButton = findViewById(R.id.register_button);
         registerButton.setOnClickListener(v -> {
+            //跳转到注册界面
             Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
             startActivity(intent);
         });
