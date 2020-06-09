@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.login.LoginActivity">
+    tools:context=".LoginActivity">
 
     <View
         android:id="@+id/divider"
@@ -15,10 +15,10 @@
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_button2" />
+        app:layout_constraintTop_toBottomOf="@+id/login_button" />
 
     <Button
-        android:id="@+id/login_button2"
+        android:id="@+id/login_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="256dp"
@@ -31,16 +31,16 @@
 
     <ImageView
         android:id="@+id/denglu1"
-        android:layout_width="229dp"
-        android:layout_height="114dp"
-        android:layout_marginTop="128dp"
+        android:layout_width="177dp"
+        android:layout_height="123dp"
+        android:layout_marginTop="76dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/denglu" />
+        app:srcCompat="@drawable/duoduo" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/register_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="112dp"
@@ -57,7 +57,7 @@
         android:layout_marginTop="112dp"
         android:text="忘记密码"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintStart_toEndOf="@+id/register_button"
         app:layout_constraintTop_toBottomOf="@+id/divider" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -65,7 +65,7 @@
         android:layout_width="355dp"
         android:layout_height="72dp"
         android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/login_button2"
+        app:layout_constraintBottom_toTopOf="@+id/login_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.416"
         app:layout_constraintStart_toStartOf="parent"
@@ -83,6 +83,7 @@
             app:srcCompat="@drawable/ic_android_black_24dp" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/login_username"
             android:layout_width="312dp"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -117,6 +118,7 @@
             app:srcCompat="@drawable/mima" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/login_password"
             android:layout_width="312dp"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
