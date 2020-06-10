@@ -11,17 +11,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Information"></activity>
+        <activity
+            android:name=".Bottom"
+            android:label="@string/title_activity_bottom" >
+
+        </activity>
+
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
-
-        <activity android:name=".Personal">
-        </activity>
+        <activity android:name=".FriendInterfaceActivity"></activity>
+        <activity android:name=".ui.mine.PersonalInfor" ></activity>
+        <activity android:name=".chattext.MainActivity"></activity>
+        <activity android:name=".Friendinformation"></activity>
+        <activity android:name=".Commun"></activity>
 
     </application>
 

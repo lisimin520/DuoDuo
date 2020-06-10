@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -15,10 +17,13 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import cn.edu.scujcc.duoduo.Bottom;
+import cn.edu.scujcc.duoduo.FriendInterfaceActivity;
 import cn.edu.scujcc.duoduo.R;
 
 public class MainActivity extends Activity {
 	private ChatAdapter chatAdapter;
+	private final static String TAG = "DuoDuo";
 	/**
 	 * 声明ListView
 	 */
@@ -46,9 +51,19 @@ public class MainActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		View bottom_back;
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.chat);
+
+		bottom_back = findViewById(R.id.btn_msg);
+		bottom_back.setOnClickListener(v -> {
+			Log.d(TAG,"消息按钮被点击了");
+			Intent intent = new Intent(MainActivity.this, Bottom.class);
+			startActivity(intent);
+		});
+
+
 		/**
 		 * 虚拟4条发送方的消息
 		 */

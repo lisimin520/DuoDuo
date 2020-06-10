@@ -2,10 +2,14 @@ package cn.edu.scujcc.duoduo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import cn.edu.scujcc.duoduo.chattext.MainActivity;
 
 public class FriendInterfaceActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -31,7 +35,7 @@ public class FriendInterfaceActivity extends AppCompatActivity implements View.O
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.friend1:
-                Intent intent=new Intent(this,MainActivity.class);
+                Intent intent=new Intent(this, MainActivity.class);
                 startActivity(intent);
             break;
             case R.id.friend2:

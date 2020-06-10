@@ -9,10 +9,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.text.Editable;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.datepicker.MaterialDatePicker;
@@ -29,7 +26,7 @@ public class RegisterActivity extends AppCompatActivity {
 //    private String userName, psw, pswAgain;
     private final static String TAG = "DuoDuo";
     private TextInputLayout birthdayInput;
-    private Button registerButton;
+    private Button registerButton,registerbutton2;
     private Date birthday = new Date();
     private UserLab lab = UserLab.getInstance();
     private Handler handler = new Handler() {
@@ -55,15 +52,21 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         birthdayInput = findViewById(R.id.r_birthday);
-        registerButton = findViewById(R.id.register_button);
-        registerButton.setOnClickListener(v -> {
-            register();
+        registerbutton2 = findViewById(R.id.register_button2);
+        registerbutton2.setOnClickListener(v->{
+            Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+            startActivity(intent);
         });
+
+//        registerButton = findViewById(R.id.register_button);
+//        registerButton.setOnClickListener(v -> {
+//            register();
+//        });
 
         // new Builder()
         MaterialDatePicker.Builder builder = MaterialDatePicker.Builder.datePicker();
         //告诉builder我们想要的效果
-        builder.setTitleText(R.string.birthday_title);
+        builder.setTitleText(R.string.infor_title_birthday2);
         MaterialDatePicker<Long> picker = builder.build();
         //操作日历
 
@@ -110,20 +113,17 @@ public class RegisterActivity extends AppCompatActivity {
         Editable phone = phoneInput.getEditText().getText();
         u.setPhone(phone != null ? phone.toString() : "");
 
-        //获得生日
-        u.setBirthday(birthday);
-
-        //把u发送到服务器
-        lab.register(u, handler);
+//        //获得生日
+//        u.setBirthday(birthday);
+//
+//        //把u发送到服务器
+//        lab.register(u, handler);
 
         //返回按钮
-        to_login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //为了跳转到登录界面
-                Intent intent=new Intent(RegisterActivity.this,LoginActivity.class);
-                startActivity(intent);
-            }
+        to_login.setOnClickListener(v -> {
+            //为了跳转到登录界面
+            Intent intent=new Intent(RegisterActivity.this,LoginActivity.class);
+            startActivity(intent);
         });
 
 
@@ -226,4 +226,4 @@ public class RegisterActivity extends AppCompatActivity {
 //        //提交修改 editor.commit();
 //        editor.commit();
     }
-    }
+}

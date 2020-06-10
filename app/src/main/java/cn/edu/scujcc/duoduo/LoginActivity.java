@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 
+import cn.edu.scujcc.duoduo.ui.mine.PersonalInfor;
+
 public class LoginActivity extends AppCompatActivity {
     private final static String TAG = "DuoDuo";
 
@@ -43,16 +45,16 @@ public class LoginActivity extends AppCompatActivity {
         Toast.makeText(LoginActivity.this, "登录成功！", Toast.LENGTH_LONG).show();
         prefs.saveUser(user, (String) token);
         Log.d(TAG, "用户" + user + "登录成功，token＝" + token);
-        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        Intent intent = new Intent(LoginActivity.this, PersonalInfor.class);
         startActivity(intent);
     }
 
     private void loginPasswordError() {
-        Toast.makeText(LoginActivity.this, "密码错误，请重试！", Toast.LENGTH_LONG).show();
+//        Toast.makeText(LoginActivity.this, "密码错误，请重试！", Toast.LENGTH_LONG).show();
     }
 
     private void loginFail() {
-        Toast.makeText(LoginActivity.this, "登录失败！", Toast.LENGTH_LONG).show();
+//        Toast.makeText(LoginActivity.this, "登录失败！", Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -68,7 +70,7 @@ public class LoginActivity extends AppCompatActivity {
             String p = password.getEditText().getText().toString();
             lab.login(user, p, handler);
             //跳转到主界面
-            Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+            Intent intent = new Intent(LoginActivity.this, Bottom.class);
             startActivity(intent);
         });
 

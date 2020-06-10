@@ -26,6 +26,7 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import cn.edu.scujcc.duoduo.R
 import com.example.android.navigationadvancedsample.R
 
 /**

@@ -24,7 +24,8 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="birthday">生日</string>
-    <string name="birthday_title">选择生日</string>
+    <string name="infor_title_birthday2">选择生日2</string>
+    <string name="infor_title_birthday">选择生日</string>
     <string name="true_name">姓名</string>
     <string name="name">昵称</string>
     <string name="Email">电子邮箱</string>
@@ -34,4 +35,8 @@
 
     <string name="profile_image">Profile image</string>
     <string name="user_points">*****</string>
+    <string name="title_activity_bottom">Bottom</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
