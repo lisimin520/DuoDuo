@@ -17,4 +17,7 @@
     <string name="Message">消息</string>
     <string name="Friends">好友</string>
     <string name="Information">我</string>
+
+    <string name="profile_image">Profile image</string>
+    <string name="user_points">*****</string>
 </resources>
