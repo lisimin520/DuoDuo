@@ -19,6 +19,6 @@
         android:layout_marginTop="8dp"
         android:padding="8dp"
         android:background="@drawable/app_lvjian_other_chat_background"
-        android:text="权志龙好帅！！！" />
+        android:text="" />
 
 </LinearLayout>
