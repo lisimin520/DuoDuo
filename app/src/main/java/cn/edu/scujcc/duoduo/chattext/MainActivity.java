@@ -15,6 +15,8 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import cn.edu.scujcc.duoduo.R;
+
 public class MainActivity extends Activity {
 	private ChatAdapter chatAdapter;
 	/**
@@ -46,7 +48,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.chat);
 		/**
 		 * 虚拟4条发送方的消息
 		 */
@@ -72,7 +74,7 @@ public class MainActivity extends Activity {
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				if (TextUtils.isEmpty(et_chat_message.getText().toString())) {
-					Toast.makeText(MainActivity.this, "发送内容不能为空", 0).show();
+					Toast.makeText(MainActivity.this, "发送内容不能为空", Toast.LENGTH_LONG).show();
 					return;
 				}
 				PersonChat personChat = new PersonChat();

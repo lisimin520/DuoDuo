@@ -6,6 +6,40 @@
     android:orientation="vertical"
     android:padding="16dp" >
 
+    <RelativeLayout
+        android:id="@+id/chat_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="#222222"
+        android:orientation="horizontal"
+        >
+
+    <Button
+        android:id="@+id/btn_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginLeft="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:textColor="#FFF"
+        android:text="消息(0)"
+        android:textSize="7pt"
+        android:background="@drawable/back_up_down"/>
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="聊天好友名"
+            android:textSize="20sp"
+            android:textColor="#FFF"
+            android:background="#222222"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            />
+    </RelativeLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

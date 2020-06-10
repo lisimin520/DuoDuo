@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import cn.edu.scujcc.duoduo.R;
+
 public class ChatAdapter extends BaseAdapter {
 	private Context context;
 	private List<PersonChat> lists;
